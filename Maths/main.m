@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "AdditionQuestion.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
@@ -14,20 +15,23 @@ int main(int argc, const char * argv[]) {
             
             char userInput [255];
             
-            NSLog(@"I need your input");
+            AdditionQuestion *question1 = [[AdditionQuestion alloc] init];
+            
+            NSLog(@"%@", question1.question);
+            
+            //Grab user input and process to NSInteger
             fgets(userInput, 255, stdin);
-            
             NSString *convertedString = [NSString stringWithCString:userInput encoding:NSUTF8StringEncoding];
-            
             NSCharacterSet *noBadChars = [NSCharacterSet whitespaceAndNewlineCharacterSet];
-            
             NSString *trimmedString = [convertedString stringByTrimmingCharactersInSet:noBadChars];
+            NSInteger userAnswer = [trimmedString intValue];
+           
             
-            NSLog(@"%@", trimmedString);
-            
-            
-            
-            
+            if (userAnswer == question1.answer) {
+                NSLog(@"Right!");
+            } else {
+                NSLog(@"Wrong!");
+            }
             
         }
     }
