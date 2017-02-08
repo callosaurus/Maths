@@ -17,7 +17,7 @@
         int randNumber1 = (arc4random_uniform(90) + 10);
         int randNumber2 = (arc4random_uniform(90) + 10);
         
-        NSString *randomQuestion = [NSString stringWithFormat:@"%i + %i?", randNumber1, randNumber2];
+        NSString *randomQuestion = [NSString stringWithFormat:@"%i + %i? Enter 'quit' to quit", randNumber1, randNumber2];
         _question = randomQuestion;
         
         NSUInteger randomAnswer = randNumber1 + randNumber2;

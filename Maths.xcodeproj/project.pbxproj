@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3F3A355A1E4A6F0300811BAE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F3A35591E4A6F0300811BAE /* main.m */; };
 		3F3A35661E4A77D300811BAE /* AdditionQuestion.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F3A35651E4A77D300811BAE /* AdditionQuestion.m */; };
+		3F3A35691E4A925900811BAE /* InputHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F3A35681E4A925900811BAE /* InputHandler.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,6 +29,8 @@
 		3F3A35591E4A6F0300811BAE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3F3A35641E4A77D300811BAE /* AdditionQuestion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdditionQuestion.h; sourceTree = "<group>"; };
 		3F3A35651E4A77D300811BAE /* AdditionQuestion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdditionQuestion.m; sourceTree = "<group>"; };
+		3F3A35671E4A925900811BAE /* InputHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputHandler.h; sourceTree = "<group>"; };
+		3F3A35681E4A925900811BAE /* InputHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputHandler.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +64,8 @@
 			isa = PBXGroup;
 			children = (
 				3F3A35591E4A6F0300811BAE /* main.m */,
+				3F3A35671E4A925900811BAE /* InputHandler.h */,
+				3F3A35681E4A925900811BAE /* InputHandler.m */,
 				3F3A35641E4A77D300811BAE /* AdditionQuestion.h */,
 				3F3A35651E4A77D300811BAE /* AdditionQuestion.m */,
 			);
@@ -125,6 +130,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F3A355A1E4A6F0300811BAE /* main.m in Sources */,
+				3F3A35691E4A925900811BAE /* InputHandler.m in Sources */,
 				3F3A35661E4A77D300811BAE /* AdditionQuestion.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

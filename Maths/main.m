@@ -8,25 +8,33 @@
 
 #import <Foundation/Foundation.h>
 #import "AdditionQuestion.h"
+#import "InputHandler.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        while (YES) {
-            
-            char userInput [255];
+        
+        BOOL gameon = YES;
+        
+        while (gameon == YES) {
+        
             
             AdditionQuestion *question1 = [[AdditionQuestion alloc] init];
             
             NSLog(@"%@", question1.question);
             
-            //Grab user input and process to NSInteger
-            fgets(userInput, 255, stdin);
-            NSString *convertedString = [NSString stringWithCString:userInput encoding:NSUTF8StringEncoding];
-            NSCharacterSet *noBadChars = [NSCharacterSet whitespaceAndNewlineCharacterSet];
-            NSString *trimmedString = [convertedString stringByTrimmingCharactersInSet:noBadChars];
-            NSInteger userAnswer = [trimmedString intValue];
-           
+            //Get user input
+            InputHandler * input1 = [[InputHandler alloc] init];
+            NSString *trimmedString = [input1 getString];
             
+            //convert modded user input to intValue
+            NSInteger userAnswer = [trimmedString intValue];
+            
+            
+            if ([trimmedString isEqualToString:@"quit"]) {
+                break;
+            }
+            
+            //compare
             if (userAnswer == question1.answer) {
                 NSLog(@"Right!");
             } else {
