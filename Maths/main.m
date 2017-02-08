@@ -28,8 +28,17 @@ int main(int argc, const char * argv[]) {
             InputHandler * input1 = [[InputHandler alloc] init];
             NSString *trimmedString = [input1 getString];
             
+            //Get answer time
+            [question1 answer];
+            float answerTime = [question1 answerTime];
+            int roundedAnswerTime = roundf(answerTime);
+            NSLog(@"%d", roundedAnswerTime);
+
             //convert modded user input to intValue
             NSInteger userAnswer = [trimmedString intValue];
+            
+    
+            
             
             if ([trimmedString isEqualToString:@"quit"]) {
                 break;

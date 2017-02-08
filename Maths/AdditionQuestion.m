@@ -10,10 +10,14 @@
 
 @implementation AdditionQuestion
 
+@synthesize answer = _answer;
+
+//Custom init with random numbers, question, and the correct answer
 - (instancetype)init
 {
     self = [super init];
     if (self) {
+        _startTime = [NSDate date];
         int randNumber1 = (arc4random_uniform(90) + 10);
         int randNumber2 = (arc4random_uniform(90) + 10);
         
@@ -25,6 +29,18 @@
         
     }
     return self;
+}
+
+//Getter method
+- (NSInteger)answer {
+    _endTime = [NSDate date];
+    //NSLog(@"The end time is %@", _endTime);
+    return _answer;
+}
+
+-(NSTimeInterval)answerTime {
+    NSTimeInterval timeToAnswer = [_endTime timeIntervalSinceDate:_startTime];
+    return timeToAnswer;
 }
 
 @end
